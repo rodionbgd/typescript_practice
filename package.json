@@ -1,0 +1,53 @@
+{
+  "name": "typescript_practice",
+  "version": "1.0.0",
+  "description": "Typescript practice",
+  "scripts": {
+    "lint": "eslint src && prettier --check src",
+    "lint:fix": "eslint --fix src && prettier --write src",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,css,md,json,yml}": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodionbgd/typescript_practice.git"
+  },
+  "keywords": [
+    "js",
+    "typescript"
+  ],
+  "author": "Rodion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodionbgd/typescript_practice/issues"
+  },
+  "homepage": "https://github.com/rodionbgd/typescript_practice#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/react": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
